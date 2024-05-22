@@ -1,0 +1,21 @@
+/* src/Partition.css */
+.partition {
+    display: flex;
+    position: relative;
+    flex: 1;
+    border: 1px solid #000;
+    overflow: hidden;
+  }
+  
+  .partition-controls {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+  }
+  
+  .partition-controls button {
+    margin: 0 2px;
+    padding: 5px;
+  }
+  
