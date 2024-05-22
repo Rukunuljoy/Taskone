@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Partition.css';
 
 const generateRandomColor = () => {
@@ -7,7 +8,7 @@ const generateRandomColor = () => {
 
 const Partition = ({ id, onRemove }) => {
   const [partitions, setPartitions] = useState([]);
-  const [color, setColor] = useState(generateRandomColor());
+  const [color] = useState(generateRandomColor());
   const [isVertical, setIsVertical] = useState(true);
 
   const handleSplit = (vertical) => {
@@ -35,6 +36,11 @@ const Partition = ({ id, onRemove }) => {
       ))}
     </div>
   );
+};
+
+Partition.propTypes = {
+  id: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Partition;
